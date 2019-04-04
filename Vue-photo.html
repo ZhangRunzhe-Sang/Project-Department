@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .list li {
+            list-style: none;
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px solid red;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <img :src="url" alt="">
+        <ul class="list">
+            <li v-for="item, index in list" @click="btn(item.photo)"> {{item.lab}} </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                url: "img1.jpg",
+                list: [
+                    {
+                        lab: '1',
+                        photo: 'img2.jpg'
+                    },
+                    {
+                        lab: '2',
+                        photo: 'img3.jpg'
+                    },
+                ]
+            },
+            methods: {
+                btn(url) {
+                    this.url = url
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

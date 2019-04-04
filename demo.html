@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- querySelector方法获取元素 -->
+    <!-- <h1>hello world</h1>
+    <script>
+        
+        var h1 = document.querySelector("h1");
+        h1.style.color = "red";
+    
+    </script> -->
+
+    <!-- querySelectorAll设置多个元素的样式 -->
+    <!-- <ul>
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>草莓</li>
+    </ul>
+
+    <script>
+        var ail = document.querySelectorAll("li");
+        for(var i=0; i<ail.length;i++){
+            ail[i].style.color = "red";
+        }
+    </script> -->
+
+
+
+    <!-- 绑定 -->
+    <!-- <button>按钮</button>
+    <script>
+        var btn = document.querySelector("btn");
+        btn.onclick = function(){
+            console.log("hello world")
+        }
+    
+    
+    </script> -->
+
+
+
+    <!-- <h1>内容:</h1>
+<button>添加文本节点</button>
+<script>
+    var h1 = document.querySelector("h1");
+    var btn = document.querySelector("button");
+    btn.onclick = function(){
+        var text = document.createTextNode("hello world");
+        h1.appendChild(text);
+    }
+</script> -->
+
+
+
+    <!-- <h1>内容：</h1>
+<button>添加文本节点</button>
+<script>
+    var h1 = document.querySelector("h1");
+    var btn = document.querySelector("button");
+    btn.onclick = function(){
+        h1.innerHTML = "hello world"
+    }
+
+</script> -->
+
+
+
+    <!-- 添加元素节点 -->
+    <!-- <button>添加节点</button>
+<ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>鸭梨</li>
+</ul>
+<script>
+    var btn = document.querySelector("button");
+    var ul = document.querySelector("ul");
+    btn.onclick = function(){
+        var li = document.createElement("li")
+        li.innerHTML = "鸭梨"
+        ul.appendChild(li);
+    }
+</script> -->
+
+    <!-- <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: none;
+        }
+    </style>
+    <label for=""    
+        onmouseover="document.getElementById('box').style.display='block'"
+        onmouseout="document.getElementById('box').style.display='none'">
+        <input type="checkbox">  
+        <span>自动登录</span>
+    </label>
+    <div id="box">
+        错误
+    </div> -->
+
+
+
+
+    <!-- <input type="text" id="email">
+    <button id="btn">提交</button>
+    <script src="jquery.js"></script>
+    <script>
+        var reg = /^[0-9A-Za-z][\.-_0-9A-Za-z]*@[0-9A-Za-z]+(\.[0-9A-Za-z]+)+$/
+        $("button").click(function () {
+            if (reg.test(email.value)) {
+                alert("邮箱填写成功")
+            } else {
+                alert("邮箱填写错误")
+            }
+        })
+    </script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src=""></script>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
