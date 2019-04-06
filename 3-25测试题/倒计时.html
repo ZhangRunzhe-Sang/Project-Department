@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <span> {{day}} 天</span>
+        <span> {{hours}} 时</span>
+        <span> {{minutes}} 分</span>
+        <span> {{seconds}} 秒</span>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                day: '',
+                hours: '',
+                minutes: '',
+                seconds: ''
+            },
+            created() {
+                let target = new Date("2020-2-11").getTime(); //获取目标时间戳
+                setInterval(() => {
+                    let now = new Date().getTime(); //获取当前时间戳
+                    let difference = target - now;
+                    let allseconds = Math.floor(difference / 1000) //计算距离目标时间总计多少秒
+                    let allminutes = Math.floor(allseconds / 60);
+                    let seconds = allseconds % 60; //秒==秒的余数
+                    let allhours = Math.floor(allminutes / 60);
+                    let minutes = allminutes % 60;
+                    let day = Math.floor(allhours / 24);
+                    let hours = allhours % 24;
+
+                    this.day = day;
+                    this.hours = hours;
+                    this.minutes = minutes;
+                    this.seconds = seconds;
+                }, 1000)
+            }
+        })
+    </script>
+</body>
+
+</html>

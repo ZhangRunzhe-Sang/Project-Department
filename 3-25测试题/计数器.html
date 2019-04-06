@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="+" @click="jia">
+
+        <span> {{ msg }} </span>
+
+        <input type="button" value="-" @click="jian">
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 99
+            },
+            methods: {
+                jia() {
+                    this.msg ++
+                },
+                jian() {
+                    this.msg = this.msg -1
+                } 
+            }
+        })
+
+    </script>
+</body>
+
+</html>

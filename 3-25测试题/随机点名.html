@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1> {{newName}} </h1>
+        <button @click="btn">开始</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                namelist: [
+                    "内马尔", "苏亚雷斯", "伊列斯塔", "布斯克茨", "皮克", "罗贝托", "拉基蒂奇", "马斯切拉诺",
+                ],
+                newName: '同学名字'
+            },
+            methods: {
+                btn() {
+                    this.newName = this.namelist[this.getRandom()]
+                },
+                getRandom() {
+                    return Math.floor(Math.random() * this.namelist.length)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" placeholder="姓名" v-model="name">
+        <input type="text" placeholder="性别" v-model="sex">
+        <input type="number" placeholder="年龄" v-model="age">
+        <input type="number" placeholder="成绩" v-model="num">
+        <input type="button" value="添加" @click="add">
+
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="name">姓名</th>
+                    <th class="sex">性别</th>
+                    <th class="age">年龄</th>
+                    <th class="score">成绩</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item,index in list" :key="item.name">
+                    <td> {{item.name}} </td>
+                    <td> {{item.sex}} </td>
+                    <td> {{item.age}} </td>
+                    <td> {{item.num}} </td>
+                    <td>
+                        <input type="button" value="修改" @click="score(index)">
+                    </td>
+                    <td>
+                        <a href="" @click.prevent="del(item.name)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                sex: '',
+                age: '',
+                num: '',
+                list: [{
+                        name: 'qfsf',
+                        sex: '男',
+                        age: "17",
+                        num: 90
+                    },
+                    {
+                        name: 'aaas',
+                        sex: '女',
+                        age: "17",
+                        num: 100
+                    }
+                ]
+            },
+            methods: {
+                add() {
+                    var student = {
+                        name: this.name,
+                        sex: this.sex,
+                        age: this.age,
+                        num: this.num
+                    }
+                    this.list.push(student),
+                        this.name = this.sex = this.age = this.score = ''
+                },
+                del(name) {
+                    var index = this.list.findIndex(item => {
+                        if (item.name == name) {
+                            return true;
+                        }
+                    })
+                    this.list.splice(index, 1)
+                },
+                score(index) {
+                    //显示可提示用户进行输入的对话框
+                    var sec = prompt("是否修改成绩")
+                    this.list[index].num = sec
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div id="app">
+        <img :src="url" alt="">
+        <button @click="btn1">1</button>
+        <button @click="btn2">2</button>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                url: "img1.jpg",
+            },
+            methods: {
+                btn1() {
+                    this.url = 'img2.jpg'
+                },
+                btn2() {
+                    this.url = 'img3.jpg'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
