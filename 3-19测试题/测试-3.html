@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+正整数加和
+        var res=0;
+        function count(m){
+            for(var i=1;i<=m;i++){
+                res+=i
+            }
+            return res;
+        }
+        var result = count(5); 
+        console.log(result);
+
+
+
+奇数加和
+   var res=0;
+        function count(m,s,n){
+            switch (s){
+                case "+": return(m+n); 
+                break;
+                case "-": console.log("m-n");
+                break;
+                case "*":  return(m*n);
+                break;
+                case "/": console.log("m/n");
+                break;
+                default: console.log("符号错误");
+                break;
+            }
+        }
+    var result = count(5,"+",6);
+    console.log(result);
+    var result = count(5,"*",6);
+    console.log(result);
+
+
+
+奇数加和
+var res = 0;
+    function count(m){
+        for(var i=1;i<=m;i++){
+            if(i%2==1){
+                console.log(i)
+                res+=i;
+            }
+        }
+        return (res);
+    }
+var result = count(10);
+console.log(result);
+
+    
+    </script> -->
+
+    <!-- 图片切换 -->
+    <!-- <img src="img1.jpg" alt="" id="photo1">
+
+    <button id="btn">1</button>
+    <button id="btn1">2</button>
+    <button id="btn2">3</button>
+    
+    <script>
+        var one = document.querySelector("#btn1");
+        var one1 = document.querySelector("#btn2");
+        var one1 = document.querySelector("#btn3");
+        var img = document.querySelector("#photo1");
+        btn.onclick = function(){
+            img.src = "img1.jpg" 
+        }
+        btn1.onclick = function(){
+            img.src = "img2.jpg" 
+        }
+        btn2.onclick = function(){
+            img.src = "img3.jpg" 
+        }
+    </script> -->
+
+
+
+    <!-- 添加、删除 -->
+    <input type="text" placeholder="添加水果名字">
+    <button>添加</button>
+    <ul>
+        <li>香蕉 <span class="del">删除</span></li>
+        <li>苹果 <span class="del">删除</span></li>
+        <li>鸭梨 <span class="del">删除</span></li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        var btn = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        var input =  document.querySelector("input");
+        // 添加
+        btn.onclick = function(){
+            var li = document.createElement("li"); //添加按钮
+            li.innerHTML = input.value
+            ul.appendChild(li); // 添加列表项
+        }
+        // 删除
+        var aDel = document.querySelectorAll(".del");
+        for(var i=0; i<aDel.length;i++){
+            aDel[i].onclick = function(){
+                var parent = this.parentNode  // 返回<li> 元素父节点
+                parent.parentNode.removeChild(parent); // 从子节点列表中删除某个节点
+            }
+        }
+
+        $("button").click(function () {
+            var $li = $("<li>");
+            var text = $("input").val();
+            $li.text(text);
+            var $del = $("<span class='del'></span>")
+
+        })
+    </script>
+
+</body>
+
+</html>
