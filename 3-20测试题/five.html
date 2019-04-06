@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="email">
+    <button id="btn">提交</button>
+    <script src="jquery.js"></script>
+    <script>
+        var reg = /^[0-9A-Za-z][\.-_0-9A-Za-z]*@[0-9A-Za-z]+(\.[0-9A-Za-z]+)+$/
+        $("button").click(function(){
+            if(reg.test(email.value)){
+                alert("邮箱填写成功")
+            }else{
+                alert("邮箱填写错误")
+            }
+        })
+    
+    </script>
+</body>
+</html>

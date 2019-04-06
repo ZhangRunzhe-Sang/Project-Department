@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [5, 10, 6, 11, 18, 22, 11, 31, 6, 52, 19];
+        var str= {};
+        var arr1 = [];
+        // var newArr = [];
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (newArr.indexOf(arr[i]) == -1) {
+        //         newArr.push(arr[i]);
+        //     }
+        // }
+        // console.log(newArr);
+
+        for(var i=0;i<arr.length;i++){
+            if(! str[arr[i]]){
+                str[arr[i]]="asd"
+                arr1.push(arr[i]);
+            }
+        }
+        console.log(arr1);
+        
+
+    </script>
+</body>
+
+</html>

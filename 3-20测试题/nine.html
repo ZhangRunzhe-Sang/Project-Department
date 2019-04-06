@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id="name">who are you??</span>
+    <button id="btn">开始</button>
+    <script src="jquery.js"></script>
+    <script>
+        $("button").click(function(){
+            var namelist=["梅西","内马尔","苏亚雷斯","伊列斯塔","布斯克茨","皮克","罗贝托","拉基蒂奇","马斯切拉诺"];
+            var num = Math.floor(Math.random()*namelist.length) 
+            document.getElementById("name").innerHTML = namelist[num];
+        })
+      
+    </script>
+</body>
+</html>
