@@ -6,18 +6,6 @@
 
 英文对照表
 
-## Filter
-
-过滤器
-
-### note
-
-note框架
-
 ### test
 
 22道题
-
-### vue
-
-vue笔记
