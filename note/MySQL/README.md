@@ -103,7 +103,7 @@ Empty set (0.01 sec)
 #### 如何往数据表中添加数据记录？
 
 ```
-mysql> INSERT INTO pet
+mysql> insert into pet
     -> VALUES ('puffball','Diane','hamster','f','1999-03-30',NULL);
 Query OK, 1 row affected (0.00 sec)    
 ```
@@ -179,3 +179,6 @@ auto_increment
 5. 外键约束
 
 > 涉及到两个表： 父表 ， 子表 / 主表 ， 副表
+foreign key(class_id)
+> 1. 主表(父表) 中没有的数据值，在副表(子表)中，是不可以使用的。
+> 2. 主表(父表)中的记录被副表(子表)引用是不可以被删除的。

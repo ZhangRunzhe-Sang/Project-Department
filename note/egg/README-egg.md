@@ -17,7 +17,7 @@ $ cd egg-name
 ## 配置模板引擎
 
 ```
-1. npm i egg-view-ejs --save
+1. npm i egg-view-nunjucks --save
 ```
 
 ### 开启插件
